@@ -39,6 +39,21 @@ services:
     networks:
       - network-bridge
 
+  # postgres:
+  #   image: postgres:latest
+  #   ports:
+  #     - 5432:5432
+  #   environment:
+  #     PGDATA: /var/lib/postgresql/data/pgdata
+  #     POSTGRES_DB: jira
+  #     POSTGRES_USER: jira
+  #     POSTGRES_PASSWORD: 123123
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data/pgdata
+  #   restart: always
+  #   networks:
+  #     - network-bridge
+
 networks:
   network-bridge:
     driver: bridge
@@ -48,3 +63,5 @@ volumes:
     external: false
   mysql_data:
     external: false
+  # postgres_data:
+  # external: false
