@@ -40,19 +40,18 @@ services:
       - network-bridge
 
   # postgres:
-  #   image: postgres:latest
-  #   ports:
-  #     - 5432:5432
-  #   environment:
-  #     PGDATA: /var/lib/postgresql/data/pgdata
-  #     POSTGRES_DB: jira
-  #     POSTGRES_USER: jira
-  #     POSTGRES_PASSWORD: 123123
-  #   volumes:
-  #     - postgres_data:/var/lib/postgresql/data/pgdata
-  #   restart: always
-  #   networks:
-  #     - network-bridge
+  #    image: postgres:latest
+  #    container_name: bamboo-postgressql
+  #    environment:
+  #      PGDATA: /var/lib/postgresql/data/pgdata
+  #      POSTGRES_DB: bamboo
+  #      POSTGRES_USER: bamboo
+  #      POSTGRES_PASSWORD: 123123
+  #    volumes:
+  #      - postgres_data:/var/lib/postgresql/data/pgdata
+  #    restart: always
+  #    networks:
+  #      - network-bridge
 
 networks:
   network-bridge:
